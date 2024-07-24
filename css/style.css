@@ -863,8 +863,27 @@ textarea.form-control {
 }
 
 .btn-tertiary:hover {
-  background: #D85BA7;
+  background: rgb(216, 91, 167);
   color: #fff;
 }
+
+.centered-box {
+  position: relative;
+  top:28%;
+  left:50%;
+  transform: translate(-50%, -30%);
+  background-color: rgba(216, 91, 167, 0.2); /* Pink with 70% opacity */
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 80%; /* Ensures the box doesn't get too wide */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px; /* Add more space below the box */
+
+  body, html {
+    height: 100%;
+    margin: 0;
+    position: relative;
+  }
 
 /*# sourceMappingURL=style.css.map */
