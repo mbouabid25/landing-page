@@ -836,21 +836,26 @@ textarea.form-control {
 }
 
 .btn-primary {
-  background-color: #6c757d; /* Example color */
+  background-color: #6c757d; 
   color: white;
   border: none;
+  border-radius: 20px;
+  margin: 2px;
 }
 
 .btn-secondary {
-  background-color: #6c757d; /* Example color */
+  background-color: #6c757d; 
   color: white;
   border: none;
+  border-radius: 20px;
+  margin: 5px;
 }
 
 .btn-tertiary {
-  background-color: #6c757d; /* Example color */
+  background-color: #6c757d; 
   color: white;
   border: none;
+  border-radius: 20px;
 }
 .btn-primary:hover {
   background: #D85BA7;
