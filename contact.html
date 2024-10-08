@@ -1,125 +1,212 @@
 <!DOCTYPE html>
-
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
-<html lang="zxx">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title> Marwa Bouabid's Contact</title>
-
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <!-- ** Plugins Needed for the Project ** -->
-  <!-- Bootstrap -->
+  <title>Contact Marwa Bouabid</title>
+
+  <!-- Bootstrap and Plugins -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
-  <link rel="stylesheet" href="plugins/counto/animate.css">
   <link rel="stylesheet" href="plugins/aos/aos.css">
   <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.min.css">
-  <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
-  <link rel="stylesheet" href="plugins/animated-text/animated-text.css">
 
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
 
+  <!-- Custom Styles for Modern UI and UX -->
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      padding-top: 80px;
+    }
+
+    .page-title {
+      padding: 100px 0;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+    }
+
+    .page-title h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* Adjust the size of the text boxes */
+    .circular-text-box {
+      background-color: #f4e9ee; /* Light pink color */
+      border-radius: 20px;
+      padding: 30px;
+      width: 320px; /* Adjusted width to ensure text fits */
+      height: 280px; /* Increased height for better text spacing */
+      margin: 0 auto 40px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .circular-text-box h4 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .circular-text-box p {
+      margin: 0;
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5; /* Improved line spacing */
+    }
+
+    .circular-text-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Contact section */
+    .contact {
+      padding: 60px 0;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      color: #333;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #000;
+    }
+
+    /* Ensure all text boxes are the same size */
+    .circular-text-box {
+      min-height: 280px; /* Ensure consistent height */
+    }
+
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+      .circular-text-box {
+        width: 260px;
+        height: 240px;
+        padding: 25px;
+      }
+
+      .circular-text-box h4 {
+        font-size: 18px;
+      }
+
+      .circular-text-box p {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg  main-nav " id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+      <div class="row justify-content-center"> 
+        <!-- <img src="images/logo.png" alt="" class="img-fluid"> -->
+      </a>
   
-<!-- Header Start --> 
-
-<nav class="navbar navbar-expand-lg  main-nav " id="navbar">
-	<div class="container">
-	  <a class="navbar-brand" href="index.html">
-		<div class="row justify-content-center"> 
-	  	<!-- <img src="images/logo.png" alt="" class="img-fluid"> -->
-	  </a>
-
-	  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="ti-align-justify"></span>
-	  </button>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="ti-align-justify"></span>
+      </button>
+    
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item  active"><a class="nav-link" href="index.html">Home</a></li>
   
-		  <div class="collapse navbar-collapse" id="navbarsExample09">
-			<ul class="navbar-nav ml-auto">
-			  <li class="nav-item  active"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                          <li><a class="dropdown-item" href="about.html"> About me </a></li>
+              <li><a class="dropdown-item" href="certifications.html"> Certifications </a></li>
+              <li><a class="dropdown-item" href="https://spheria.ai/marwabouabid" target="_blank" > Chat with my Personal AI </a> </li>
+            </ul>
+          </li>
+  
+            <li class="nav-item  active"><a class="nav-link" href="portfolio-1.html"> Portfolio </a></li>
+    
+          <li class="nav-item  active"><a class="nav-link" href="blog-grid.html"> Blog </a></li>
+         
+           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-			  <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown01">
-                        <li><a class="dropdown-item" href="about.html"> About me </a></li>
-						<li><a class="dropdown-item" href="certifications.html"> Certifications </a></li>
-						<li><a class="dropdown-item" href="https://spheria.ai/marwabouabid" target="_blank" > Chat with my Personal AI </a></li>
-					</ul>
-			  </li>
-
-				  <li class="nav-item  active"><a class="nav-link" href="portfolio-1.html"> Portfolio </a></li>
-	
-			  </li>
-			  <li class="nav-item  active"><a class="nav-link" href="blog-grid.html"> Blog </a></li>
-	
-			</li>
-			 
-			   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-<!-- Header Close --> 
-
-
-<section class="page-title section pb-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="text-center">
-          <h1 class="text-capitalize mb-0 text-lg">Get in Touch</h1>
+  <!-- Page Title Section -->
+  <section class="page-title">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Get in Touch</h1>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- contact form start -->
-<section class="contact section">
-    <div class="container justify-content-center">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 mb-4 mb-lg-0 col-md-4">
-              <div class="circular-text-box"> <h4><br> Address </h4> 9 Rue Assil, lot Mouline, Souissi - Rabat - Morocco. 10170 </div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-              <div class="circular-text-box"> <h4> <br> Contact </h4> bouab22m@mtholyoke.edu <br> +212 663 019 923</div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-              <div class="circular-text-box"> <h4> <br> Socials </h4> Linkedin, GitHub, Instagram <br> Follow me :) </div>
-            </div>
-        </div>.
-</section>
+  </section>
 
-<!-- jQuery -->
-<script src="plugins/jQuery/jquery.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script src="plugins/aos/aos.js"></script>
-<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-<script src="plugins/shuffle/shuffle.min.js"></script>
-<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="plugins/animated-text/animated-text.js"></script>
-<script src="plugins/counto/apear.js"></script>
-<script src="plugins/counto/counTo.js"></script>
+  <!-- Contact Section -->
+  <section class="contact section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+          <div class="circular-text-box">
+            <h4>Address</h4>
+            <p>9 Rue Assil, lot</p>
+            <p>Mouline, Souissi - Rabat</p>
+            <p>- Morocco. 10170</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+          <div class="circular-text-box">
+            <h4>Contact</h4>
+            <p>bouab22m@mtholyoke.edu</p>
+            <p>+212 663 019 923</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="circular-text-box">
+            <h4>Socials</h4>
+            <div class="social-icons">
+              <a href="https://linkedin.com/in/marwabouabid" target="_blank"><i class="ti-linkedin"></i></a>
+              <a href="https://github.com/marwabouabid" target="_blank"><i class="ti-github"></i></a>
+              <a href="https://instagram.com/marwabouabid" target="_blank"><i class="ti-instagram"></i></a>
+            </div>
+            <p>Follow me :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
- <!-- Google Map -->
-<script src="plugins/google-map/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script> 
-<!-- Main Script -->
-<script src="js/script.js"></script>
+  <!-- JavaScript Plugins -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+  <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="plugins/animated-text/animated-text.js"></script>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+
+</body>
 
 </html>

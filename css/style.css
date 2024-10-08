@@ -85,12 +85,20 @@ h6, .h6 {
 }
 
 .btn-main {
-  background: #D85BA7;
-  color: #fff;
+  background-color: #ff6700; /* Initial background color */
+  color: white; /* Initial text color */
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: all 0.6s ease-in-out; /* Add smooth transition */
+  text-decoration: none; /* Ensures no underline on text */
+  border: none; /* Remove any borders */
 }
+
 .btn-main:hover {
-  color: #fff !important;
-  background: #000;
+  transform: translateY(-5px); /* Moves the button slightly upward */
+  background: #D85BA7; /* New background color on hover */
+  box-shadow: 0 6px 12px rgba(216, 91, 167, 0.35); /* Adds shadow on hover */
+  color: #fff; /* Keeps the text color white on hover */
 }
 
 .btn-black {
@@ -389,6 +397,21 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 .portfolio .btn-group .btn:hover {
   color: #ed1797;
 }
+
+.col-lg-6.d-flex {
+  justify-content: center; /* Centers the content vertically */
+}
+
+.btn-main {
+  background-color: #ff6700;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-main:hover {
+  background-color: #e65c00;
+}
+
 .portfolio .btn-group:not(:first-child) > .btn, .portfolio .btn-group > .btn:not(:first-child) {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -409,6 +432,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   margin: 10px;
   overflow: hidden;
   max-height: 30vh;
+  border-radius: 15px;
 }
 
 .inner-box .image img {
@@ -416,6 +440,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   width: 100%;
   display: block;
   transition: all 0.3s;
+  border-radius: 15px;
 }
 
 .inner-box .image .overlay-box {
@@ -428,6 +453,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   display: block;
   transition: all 0.6s ease;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .inner-box .image .overlay-box:before {
@@ -441,6 +467,8 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   opacity: 0;
   transition: all 0.4s;
   background-color: rgba(47, 50, 56, 0.8);
+  border-radius: 15px;
+
 }
 
 .inner-box:hover .image img {
@@ -843,6 +871,7 @@ textarea.form-control {
   height: auto; /* Maintain aspect ratio */
   display: block; /* Ensure image is treated as a block element */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  border-radius: 15px;
 }
 
 /* Optional: Adjust margin for spacing between text and image */
@@ -893,7 +922,7 @@ textarea.form-control {
   width: 80%;              /* Adjust width as needed */
   height: 60vh;           /* Adjust height as needed */
   border: none;            /* Remove default border */
-}one;            /* Remove any default border */
+}            /* Remove any default border */
 
 /* Add these styles */
 .hover-text {
@@ -914,6 +943,12 @@ textarea.form-control {
   border-radius: 20px;
   margin: 2px;
   box-shadow: hsla(0, 0%, 60%, 0.49) 1px 8px 8px 0px;
+}
+
+#specific-button {
+  padding: 20px 40px; /* Ensure sufficient padding */
+  margin: 10px; /* Adjust margin */
+
 }
 
 .btn-secondary {
@@ -939,7 +974,6 @@ textarea.form-control {
   box-shadow: 0 6px 12px rgba(216, 91, 167, 0.35);
   color: #fff;
 }
-
 
 .btn-secondary:hover {
   transition: all 0.6s ease-in-out;
@@ -1032,5 +1066,62 @@ body {
     margin: 0 1rem;
     box-sizing: border-box;
   }
+
+  /* .image-container img {
+    width: 10px !important;
+    height: 10px !important;
+    object-fit: cover;
+  } */
+
+  .image-container img {
+    width: 300px !important;  /* Force the width */
+    height: auto !important; /* Ensure height is adjusted automatically */
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.bordered-paragraph {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #fff;
+
+    flex-grow: 1; /* Ensures all boxes grow to the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.paragraph-container {
+    /* Remove any borders or unnecessary padding here */
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#specific-paragraph{
+  max-width: 60%;
+  padding: 0px;
+  margin: 0px;
+}
+
+iframe {
+  border-radius: 15px; /* Adjust the value for desired roundness */
+  overflow: hidden; /* Ensures the content stays within the rounded corners */
+  border: none; /* Optional: Remove any border */
+}
+
 
  
