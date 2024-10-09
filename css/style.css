@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,600,700|Work+Sans:400,700,800");
 html {
   overflow-x: hidden;
+  height: auto;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
   line-height: 1.7em;
   color: #818385;
   padding-top: 60px; /* Adjust this value to match the height of your navbar */
+  height: auto;
 }
 
 p {
@@ -807,16 +809,29 @@ textarea.form-control {
   }
 }
 .footer {
-  padding: 60px 0px;
-  background: white;
+  display: flex;
+  justify-content: center;  /* Centers the icons horizontally */
+  align-items: center;      /* Centers the icons vertically */
+  background-color: #ffffff; /* Set the background color */
+  padding: 10px 0;           /* Further reduce padding */
+  margin-bottom: 0;         /* Ensure no margin at the bottom */
+  clear: both;              /* Clear floats to prevent overlap with other elements */
+  position: relative;       /* Ensure the footer stays at the bottom */
+  height: auto;             /* Ensure the height only fits content */
 }
 
 .footer-widget a {
   color: rgba(255, 255, 255, 0.5);
   text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  display: inline-block;  /* Make sure the element is not affected by line-height */
 }
+
 .footer-widget a:hover {
   color: #D85BA7;
+  margin: 0;
+  padding: 0;
 }
 
 #navbar {
@@ -909,21 +924,6 @@ textarea.form-control {
   text-align: center; /* Center text horizontally */
 }
 
-/* Center the PDF container */
-.pdf-container {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  margin: 20px 0;          /* Add margin around the PDF */
-}
-
-/* Style the embedded PDF */
-.pdf-embed {
-  width: 80%;              /* Adjust width as needed */
-  height: 60vh;           /* Adjust height as needed */
-  border: none;            /* Remove default border */
-}            /* Remove any default border */
-
 /* Add these styles */
 .hover-text {
     color: #000; /* Default text color */
@@ -991,9 +991,8 @@ textarea.form-control {
   box-shadow: 0 6px 12px rgba(216, 91, 167, 0.35);
 }
 
-
   body, html {
-    height: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1014,6 +1013,7 @@ textarea.form-control {
 /* Optional: Smooth transition */
 body {
   transition: background-color 0.3s;
+  height: auto;
 }
 
 .circular-text-box {
@@ -1066,13 +1066,7 @@ body {
     margin: 0 1rem;
     box-sizing: border-box;
   }
-
-  /* .image-container img {
-    width: 10px !important;
-    height: 10px !important;
-    object-fit: cover;
-  } */
-
+  
   .image-container img {
     width: 300px !important;  /* Force the width */
     height: auto !important; /* Ensure height is adjusted automatically */
@@ -1123,5 +1117,101 @@ iframe {
   border: none; /* Optional: Remove any border */
 }
 
+/* Basic styling for the About section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0;
+  background-color: #f7f7f7;
+  height: calc(100vh - 90px);
+}
 
- 
+.about-section h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+  margin-top: 10px; 
+}
+
+.about-table {
+  width: 25%;
+  min-height: 300px;
+  border-right: 1px solid #ccc;
+}
+
+.about-table ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-item {
+  position: relative;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  width: 8px;
+  background-color: transparent; /* Invisible by default */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, top 0.3s ease; /* Smooth slide effect */
+}
+
+.about-item:hover, .about-item.active {
+  color: #D85BA7;
+}
+
+.about-item.active::before {
+  background-color: #D85BA7; /* Highlight color for active row */
+  top: 50%;
+  height: 60%;
+}
+
+.about-focus {
+  width: 70%;
+  padding-left: 20px;
+  position: relative;
+}
+
+#about-title {
+  font-size: 24px;
+  color: #333; /* Default title color */
+}
+
+#about-description {
+  font-size: 16px;
+  color: #666; /* Default description color */
+  line-height: 1.5em;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .about-section {
+      flex-direction: column;
+  }
+
+  .about-table {
+      margin: 10px;
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #ccc;
+  }
+
+  .about-focus {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 20px;
+  }
+
+}

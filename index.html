@@ -236,6 +236,32 @@
 </section>
 <!-- Portfolio End -->
 
+<section class="about-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2>About Me</h2>
+        </div>
+        <div class="row about-section">
+            <!-- Sidebar with rows on the left -->
+            <div class="col-md-4 about-table">
+                <ul>
+                    <li class="about-item" onclick="changeContent(1)">AI Enthusiast</li>
+                    <li class="about-item" onclick="changeContent(2)">Full-Stack Developer</li>
+                    <li class="about-item" onclick="changeContent(3)">Academic Excellence</li>
+                    <li class="about-item" onclick="changeContent(4)">Business Acumen </li>
+                    <li class="about-item" onclick="changeContent(5)">Leadership & Communication</li>
+                </ul>
+            </div>
+
+            <!-- Focus section in the middle -->
+            <div class="col-md-8 about-focus" id="about-focus-content">
+                <h3 id="about-title">AI Enthusiast</h3>
+                <p id="about-description">I am passionate about AI and applying machine learning to solve real-world problems, with a focus on ethics and innovation in technology.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--Footer Start-->
 <section id="footer" class="footer">
 	<div class="container">
@@ -416,6 +442,108 @@
       observer.observe(portfolio);
     });
   </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const items = document.querySelectorAll('.about-item');
+
+        // Set AI Enthusiast as the default active on page load
+        items[0].classList.add('active');
+
+        items.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                changeContent(index + 1);
+            });
+        });
+
+        function changeContent(section) {
+            const aboutTitle = document.getElementById('about-title');
+            const aboutDescription = document.getElementById('about-description');
+
+            // Remove the active class from all items
+            items.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add the active class to the clicked item
+            items[section - 1].classList.add('active');
+
+            // Change content based on the selected section
+            switch (section) {
+                case 1:
+                    aboutTitle.innerHTML = 'AI Enthusiast';
+                    aboutDescription.innerHTML = `
+            <ul>
+                <li>Worked as an AI and VR Researcher at Brown University, developing 3D tools to enhance visual experiences for the visually impaired.</li>
+                <ul>
+					<li>Selected by Google for a project that ranked third at the Brown University Undergraduate Research Symposium.</li>
+				</ul>
+                <li>Led Voice Spectrum, a voice AI platform helping neurodivergent individuals practice conversation skills.</li>
+                <li>Built scalable AI systems, including:</li>
+                <ul>
+                    <li>AI customer support chatbot using Meta Llama, AWS Bedrock, and deployed on AWS EC2.</li>
+                    <li>AI-powered flashcard generator with Next.js, OpenAI, Firebase, and Stripe.</li>
+                    <li>AI Rate My Professor platform using vector embeddings, OpenAI, and Pinecone.</li>
+                </ul>
+            </ul>`;
+                    break;
+					case 2:
+					aboutTitle.innerHTML = 'Full-Stack Developer';
+					aboutDescription.innerHTML = `
+						<ul>
+							<li>Worked as a Web and iOS Developer at Valence Vibrations, where I led a team of 6 to build an iOS app using Swift, designed to assist over 1,000 neurodivergent individuals in augmenting emotional perception.</li>
+							<li>Managed the app’s backend with Firebase, ensuring real-time data synchronization and seamless app performance.</li>
+							<li>Worked as a Web Developer at my college, focusing on building and maintaining websites with WordPress, ensuring responsive design and user-friendly interfaces.</li>
+							<li>Built and maintained full-stack web applications with technologies like Next.js, Firebase, and OpenAI, including an AI-powered flashcard generator and AI Rate My Professor platform.</li>
+						</ul>`;
+					break;
+                case 3:
+					aboutTitle.innerHTML = 'Academic Excellence';
+					aboutDescription.innerHTML = `
+						<ul>
+							<li>I pursued a Bachelor of Arts in Computer Science and Mathematics at Mount Holyoke College, where I maintained a high GPA.</li>
+							<li>Excelled in core computer science courses such as Data Structures, Operating Systems, Algorithms, and Software Design and Development.</li>
+							<li>Developed a strong background in mathematics with courses in Linear Algebra, Multivariable Calculus, Real Analysis, and more.</li>
+							<li>Awarded the Gina Jacobsen Prize for Excellence in Mathematics for my academic achievements.</li>
+							<li>Received an NSF award for a Summer REU on Artificial Intelligence for Computational Creativity at Brown University, where I contributed to innovative research in AI.</li>
+						</ul>`;
+					break;
+					case 4:
+					aboutTitle.innerHTML = 'Business Enthusiast';
+					aboutDescription.innerHTML = `
+						<ul>
+							<li>I had the opportunity to shadow a Principal Product Manager at Microsoft, which sparked my interest in business and product management.</li>
+							<li>Since then, I have studied a business intelligence class independently to further develop my knowledge in the field.</li>
+							<li>I am the author of a product-centered blog on Medium, titled "From Zero to Product Pro," where I share insights on product development.</li>
+							<li>Recently, I co-founded an Arabic streetwear brand called <a href="https://wlaadlhouma.com/" target="_blank">Wlaad L*Houma</a>, which has generated a couple of thousand dollars in sales.</li>
+						</ul>`;
+					break;
+					case 5:
+				aboutTitle.innerHTML = 'Leadership & Communication';
+				aboutDescription.innerHTML = `
+					<ul>
+						<li> As a Teaching Assistant : </li>
+						<ul>
+						<li>Mentored and tutored 100+ students at Mount Holyoke College, providing support in CS and Linear Algebra to both STEM and non-STEM students.</li>
+						<li>Held office hours twice a week </li>
+						</ul>
+						<li>As the Class Board Social Chair : </li>
+						<ul>
+						<li> Led teams to plan and execute social events, including a mentorship program for 800 students and the Junior Show with over 2,000 participants.</li>
+						<li>Managed the creation of social media content for various platforms (Facebook, Instagram, Twitter).</li>
+						</ul>
+						<li>Presented multiple project outcomes and findings at conferences and symposiums. </li>
+						<li>Published several articles in my university's newspaper. </li>
+						<li>Fluent in multiple languages (French, Moroccan Arabic, MSA, English, Spanish).</li>
+					</ul>`;
+				break;
+            }
+        }
+
+        // Initialize first section content on page load
+        changeContent(1);
+    });
+</script>
 
 </body>
 
